@@ -14,9 +14,13 @@ bot_token = os.getenv("TELEGRAM_TOKEN")
 channel_id = os.getenv("TELEGRAM_CHAT_ID")
 
 
+
 app = Client(
     "my_bot", bot_token=bot_token, workers=1, api_id=api_id, api_hash=api_hash
 )
+
+# app = Client(bot_token)
+
 
 
 async def is_user_a_member(message: types.Message, channel_id=channel_id):

@@ -21,9 +21,7 @@ def get_jobs():
     resp: dict = requests.get(
         "http://127.0.0.1:8000/api/jobs?page=1&per_page=1000"
     ).json()
-    job_list = list(map(
-        lambda x: x['name'], resp['results']
-    )) if resp.get('results') else None
+    job_list = ['python', 'react']
 
     if not job_list:
         raise exceptions.NoJobException(
@@ -183,12 +181,10 @@ def get_random_proxy() -> ProxySettings:
 
     :return: A ProxySettings object with a random proxy's details.
     """
-    proxy_dict = requests.get(
-        f"{constants.HOST}/api/proxy?order_by=?&page=1&per_page=1"
-    ).json()["results"]
+    proxy_dict = ["18.169.171.234"]
     if proxy_dict is None or len(proxy_dict) == 0:
         raise exceptions.NoProxyException("Please Add A Proxy")
-    return create_proxy_url(proxy_dict[0])
+    return create_proxy_url("18.169.171.234")
 
 
 @functools.lru_cache(maxsize=128)

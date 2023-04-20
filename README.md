@@ -53,3 +53,6 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 ## Support & Contributions
 
 Please open an issue for any questions, bug reports, or feature requests. Contributions are welcome, and we encourage you to submit a pull request with any improvements or additions.
+
+Python version used: 
+Python 3.10.6 (main, Mar 10 2023, 10:55:28) [GCC 11.3.0] on linux
